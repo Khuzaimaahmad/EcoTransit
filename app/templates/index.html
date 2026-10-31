@@ -1,0 +1,231 @@
+{% extends "base.html" %}
+
+{% block title %}EcoTransit | Smart Transport for Lahore{% endblock %}
+
+{% block content %}
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+        <span class="eyebrow">SMART MOBILITY FOR LAHORE</span>
+
+        <h1>
+            Move Smarter.<br>
+            Travel <span>Greener.</span>
+        </h1>
+
+        <p>
+            Discover convenient public transport journeys across Lahore.
+            Compare routes, estimate travel time, and make more sustainable
+            travel choices.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#journey-search" class="primary-button">
+                Find Your Route →
+            </a>
+
+            <a href="#features" class="secondary-button">
+                Explore Features
+            </a>
+        </div>
+
+        <div class="hero-stats">
+            <div>
+                <h3>Smart</h3>
+                <p>Route Planning</p>
+            </div>
+
+            <div>
+                <h3>Green</h3>
+                <p>Travel Choices</p>
+            </div>
+
+            <div>
+                <h3>Lahore</h3>
+                <p>Our City</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-card">
+        <div class="card-heading">
+            <span class="live-dot"></span>
+            <span>YOUR NEXT JOURNEY</span>
+        </div>
+
+        <div class="journey-preview">
+            <div class="station-marker start-marker"></div>
+
+            <div class="station-info">
+                <small>STARTING POINT</small>
+                <h3>Choose your origin</h3>
+            </div>
+        </div>
+
+        <div class="journey-line"></div>
+
+        <div class="journey-preview">
+            <div class="station-marker end-marker"></div>
+
+            <div class="station-info">
+                <small>DESTINATION</small>
+                <h3>Choose your destination</h3>
+            </div>
+        </div>
+
+        <div class="preview-note">
+            Your journey, optimized for convenience and sustainability.
+        </div>
+    </div>
+
+</section>
+
+
+<section class="search-section" id="journey-search">
+
+    <div class="section-heading">
+        <span class="eyebrow">PLAN YOUR TRIP</span>
+        <h2>Where would you like to go?</h2>
+        <p>Start by selecting your origin and destination in Lahore.</p>
+    </div>
+
+    <form id="route-form" class="route-form">
+
+        <div class="input-group">
+            <label for="origin">Starting Point</label>
+
+            <select id="origin" name="origin" required>
+                <option value="">Select starting station</option>
+                <option value="Gajjumata">Gajjumata</option>
+                <option value="Kalma Chowk">Kalma Chowk</option>
+                <option value="Shahdara">Shahdara</option>
+                <option value="Ali Town">Ali Town</option>
+                <option value="Anarkali">Anarkali</option>
+                <option value="UET">UET</option>
+                <option value="Dera Gujran">Dera Gujran</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="destination">Destination</label>
+
+            <select id="destination" name="destination" required>
+                <option value="">Select destination station</option>
+                <option value="Gajjumata">Gajjumata</option>
+                <option value="Kalma Chowk">Kalma Chowk</option>
+                <option value="Shahdara">Shahdara</option>
+                <option value="Ali Town">Ali Town</option>
+                <option value="Anarkali">Anarkali</option>
+                <option value="UET">UET</option>
+                <option value="Dera Gujran">Dera Gujran</option>
+            </select>
+        </div>
+
+        <button type="submit" class="primary-button search-button">
+            Find Routes →
+        </button>
+
+    </form>
+
+    <p id="search-message" class="search-message" aria-live="polite"></p>
+
+</section>
+
+
+<section class="features-section" id="features">
+
+    <div class="section-heading">
+        <span class="eyebrow">BUILT FOR BETTER TRAVEL</span>
+        <h2>One city. Smarter journeys.</h2>
+        <p>Technology and algorithms working together for better mobility.</p>
+    </div>
+
+    <div class="feature-grid">
+
+        <article class="feature-card">
+            <div class="feature-icon">↗</div>
+            <h3>Smart Route Optimization</h3>
+            <p>
+                Compare journey alternatives using shortest-path algorithms
+                and transport network connections.
+            </p>
+        </article>
+
+        <article class="feature-card">
+            <div class="feature-icon">◷</div>
+            <h3>Time-Saving Journeys</h3>
+            <p>
+                Compare estimated journey durations and transfer requirements
+                to find a suitable travel option.
+            </p>
+        </article>
+
+        <article class="feature-card">
+            <div class="feature-icon">♧</div>
+            <h3>Greener Travel</h3>
+            <p>
+                Explore estimated journey emissions and compare the
+                environmental impact of different travel options.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="transport-section" id="transport">
+
+    <div class="section-heading">
+        <span class="eyebrow">LAHORE TRANSPORT NETWORK</span>
+        <h2>Connected to our city</h2>
+        <p>
+            Our planned dataset will cover verified stations and connections
+            across selected Lahore public transport services.
+        </p>
+    </div>
+
+    <div class="transport-grid">
+
+        <article class="transport-card">
+            <div class="transport-number">01</div>
+            <h3>Metrobus</h3>
+            <p>
+                Model the Metrobus corridor and its verified stations
+                as part of the route-planning network.
+            </p>
+        </article>
+
+        <article class="transport-card">
+            <div class="transport-number">02</div>
+            <h3>Orange Line</h3>
+            <p>
+                Represent train stations, their sequence, and supported
+                interchange connections.
+            </p>
+        </article>
+
+        <article class="transport-card">
+            <div class="transport-number">03</div>
+            <h3>Feeder Services</h3>
+            <p>
+                Add verified feeder routes to expand journey options
+                and connect additional destinations.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="cta-section">
+    <span class="eyebrow">THE FUTURE OF URBAN MOBILITY</span>
+    <h2>Better routes. Better choices. A greener Lahore.</h2>
+    <a href="#journey-search" class="primary-button">
+        Plan Your Journey →
+    </a>
+</section>
+
+{% endblock %}
